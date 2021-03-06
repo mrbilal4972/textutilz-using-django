@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analyze</title>
+</head>
+<body>
+    <h1>Welcome to the Text Analyzer - Enter the Text Below</h1>
+    <form action='/txtAnalyzer' method='POST'> {% csrf_token %}
+        <textarea name="txt" id="txt" cols="50" rows="10"></textarea>
+        <br>    
+        <input type="checkbox" name="removepunc"> Remove Punctuations<br>
+        <input type="checkbox" name="removeNewLine"> Remove New Line<br>
+        <input type="checkbox" name="spaceRemover"> Remove Extra spaces<br>
+        <input type="checkbox" name="upperCase"> Convert to Upper Case<br>
+        <input type="checkbox" name="strLength"> Length of String<br>
+        <input type="checkbox" name="charCount"> Number of Characters in a String<br>
+        <button type="submit">Analyze Text</button>
+    </form>
+</body>
+</html>
